@@ -1,0 +1,10 @@
+Buildfile: C:\Users\plval\Documents\Mendix\ProyectoFinal-main\deployment\build_core.xml
+
+deploy:
+     [copy] Copying 52 files to C:\Users\plval\Documents\Mendix\ProyectoFinal-main\deployment
+     [copy] Copying 40 files to C:\Users\plval\Documents\Mendix\ProyectoFinal-main\deployment\model\lib\userlib
+     [copy] Copying 8 files to C:\Users\plval\Documents\Mendix\ProyectoFinal-main\deployment\model\resources
+
+BUILD SUCCESSFUL
+Total time: 1 second
+
