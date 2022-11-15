@@ -212,7 +212,7 @@ public class Inscripcion
 	 * @throws com.mendix.core.CoreException
 	 * @return value of Inscripcion_CursoOfertado
 	 */
-	public final java.util.List<myfirstmodule.proxies.CursoOfertado> getInscripcion_CursoOfertado() throws com.mendix.core.CoreException
+	public final myfirstmodule.proxies.CursoOfertado getInscripcion_CursoOfertado() throws com.mendix.core.CoreException
 	{
 		return getInscripcion_CursoOfertado(getContext());
 	}
@@ -222,16 +222,12 @@ public class Inscripcion
 	 * @return value of Inscripcion_CursoOfertado
 	 * @throws com.mendix.core.CoreException
 	 */
-	@SuppressWarnings("unchecked")
-	public final java.util.List<myfirstmodule.proxies.CursoOfertado> getInscripcion_CursoOfertado(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
+	public final myfirstmodule.proxies.CursoOfertado getInscripcion_CursoOfertado(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
 	{
-		java.util.List<myfirstmodule.proxies.CursoOfertado> result = new java.util.ArrayList<>();
-		Object valueObject = getMendixObject().getValue(context, MemberNames.Inscripcion_CursoOfertado.toString());
-		if (valueObject == null) {
-			return result;
-		}
-		for (com.mendix.systemwideinterfaces.core.IMendixObject mendixObject : com.mendix.core.Core.retrieveIdList(context, (java.util.List<com.mendix.systemwideinterfaces.core.IMendixIdentifier>) valueObject)) {
-			result.add(myfirstmodule.proxies.CursoOfertado.initialize(context, mendixObject));
+		myfirstmodule.proxies.CursoOfertado result = null;
+		com.mendix.systemwideinterfaces.core.IMendixIdentifier identifier = getMendixObject().getValue(context, MemberNames.Inscripcion_CursoOfertado.toString());
+		if (identifier != null) {
+			result = myfirstmodule.proxies.CursoOfertado.load(context, identifier);
 		}
 		return result;
 	}
@@ -240,7 +236,7 @@ public class Inscripcion
 	 * Set value of Inscripcion_CursoOfertado
 	 * @param inscripcion_cursoofertado
 	 */
-	public final void setInscripcion_CursoOfertado(java.util.List<myfirstmodule.proxies.CursoOfertado> inscripcion_cursoofertado)
+	public final void setInscripcion_CursoOfertado(myfirstmodule.proxies.CursoOfertado inscripcion_cursoofertado)
 	{
 		setInscripcion_CursoOfertado(getContext(), inscripcion_cursoofertado);
 	}
@@ -250,14 +246,13 @@ public class Inscripcion
 	 * @param context
 	 * @param inscripcion_cursoofertado
 	 */
-	public final void setInscripcion_CursoOfertado(com.mendix.systemwideinterfaces.core.IContext context, java.util.List<myfirstmodule.proxies.CursoOfertado> inscripcion_cursoofertado)
+	public final void setInscripcion_CursoOfertado(com.mendix.systemwideinterfaces.core.IContext context, myfirstmodule.proxies.CursoOfertado inscripcion_cursoofertado)
 	{
-		var identifiers = inscripcion_cursoofertado
-			.stream()
-			.map(proxyObject -> proxyObject.getMendixObject().getId())
-			.collect(java.util.stream.Collectors.toList());
-		
-		getMendixObject().setValue(context, MemberNames.Inscripcion_CursoOfertado.toString(), identifiers);
+		if (inscripcion_cursoofertado == null) {
+			getMendixObject().setValue(context, MemberNames.Inscripcion_CursoOfertado.toString(), null);
+		} else {
+			getMendixObject().setValue(context, MemberNames.Inscripcion_CursoOfertado.toString(), inscripcion_cursoofertado.getMendixObject().getId());
+		}
 	}
 
 	/**

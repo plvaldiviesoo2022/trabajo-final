@@ -22,6 +22,7 @@ public class CursoOfertado
 	{
 		Inicio("Inicio"),
 		Fin("Fin"),
+		Descripcion("Descripcion"),
 		CursoOfertado_Docente("MyFirstModule.CursoOfertado_Docente"),
 		CursoOfertado_Periodo("MyFirstModule.CursoOfertado_Periodo"),
 		CursoOfertado_Curso("MyFirstModule.CursoOfertado_Curso");
@@ -197,6 +198,42 @@ public class CursoOfertado
 	public final void setFin(com.mendix.systemwideinterfaces.core.IContext context, java.util.Date fin)
 	{
 		getMendixObject().setValue(context, MemberNames.Fin.toString(), fin);
+	}
+
+	/**
+	 * @return value of Descripcion
+	 */
+	public final java.lang.String getDescripcion()
+	{
+		return getDescripcion(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of Descripcion
+	 */
+	public final java.lang.String getDescripcion(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.Descripcion.toString());
+	}
+
+	/**
+	 * Set value of Descripcion
+	 * @param descripcion
+	 */
+	public final void setDescripcion(java.lang.String descripcion)
+	{
+		setDescripcion(getContext(), descripcion);
+	}
+
+	/**
+	 * Set value of Descripcion
+	 * @param context
+	 * @param descripcion
+	 */
+	public final void setDescripcion(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String descripcion)
+	{
+		getMendixObject().setValue(context, MemberNames.Descripcion.toString(), descripcion);
 	}
 
 	/**

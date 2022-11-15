@@ -3,5 +3,6 @@ Buildfile: C:\Users\plval\Documents\Mendix\ProyectoFinal-main\deployment\build_c
 clean-custom-classes:
 
 BUILD SUCCESSFUL
-Total time: 1 second
+Total time: 0 seconds
+
 
